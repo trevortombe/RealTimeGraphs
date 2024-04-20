@@ -1,8 +1,8 @@
 # This Actions file will update all plots each Wednesday morning
 name: updatefigures
 on:
-  #schedule:
-  #  - cron: '00 13 * * 3'
+  schedule:
+    - cron: '0 0 1 * *'
   workflow_dispatch:
 jobs:
   build:
