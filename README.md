@@ -13,4 +13,4 @@ All figures are stored in the **Figures** folder.
 
 ## Instructions to access updated data
 
-All data files are stored in the **Data** folder as excel files for each chapter. Within each excel file are separate tabs that contain the underlying data for each figure.
+All data files are stored in the **Data** folder as excel files for each chapter. Within each excel file are separate tabs that contain the underlying data for each figure. These can be downloaded using a similar stable URL as for figures. For example, https://github.com/trevortombe/RealTimeGraphs/raw/main/Data/C02%20Figures.xlsx will fetch the chapter 2 data file.
