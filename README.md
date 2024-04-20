@@ -1,5 +1,5 @@
 # RealTimeGraphs
-Experimental code to automatically update selected figures. Currently Chapter 2 figures are included, but more can be added.
+Experimental code to automatically update selected figures. Currently selected figures from Chapters 2 and 7 are included for demonstration purposes only.
 
 ## Instructions to access updated figures
 
