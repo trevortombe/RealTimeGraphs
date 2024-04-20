@@ -1,5 +1,5 @@
 # This Actions file will update all plots each Wednesday morning
-name: updateplots
+name: updatefigures
 on:
   #schedule:
   #  - cron: '00 13 * * 3'
@@ -20,5 +20,5 @@ jobs:
           git config --global user.email "trevor.tombe@gmail.com"
           git config --global user.name "Trevor Tombe"
           git add 'Figures/*.*' 'Data/*.*'
-          git commit -m "Update All Plots" || echo "No changes to commit"
+          git commit -m "Update All Figures" || echo "No changes to commit"
           git push origin || echo "No changes to commit"
