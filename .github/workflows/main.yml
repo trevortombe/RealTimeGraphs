@@ -15,8 +15,20 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v2
       - name: Run R script 2
         run: Rscript 'R/C02.R'
+      - name: Run R script 3
+        run: Rscript 'R/C03.R'
+      - name: Run R script 4
+        run: Rscript 'R/C04.R'
+      - name: Run R script 5
+        run: Rscript 'R/C05.R'
       - name: Run R script 7
         run: Rscript 'R/C07.R'
+      - name: Run R script 8
+        run: Rscript 'R/C08.R'
+      - name: Run R script 13
+        run: Rscript 'R/C13.R'
+      - name: Run R script 14
+        run: Rscript 'R/C14.R'
       - name: Commit results
         run: |
           git config --global user.email "trevor.tombe@gmail.com"
