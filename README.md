@@ -1,5 +1,5 @@
 # RealTimeGraphs
-This repository contains code that automatically updates selected figures from Macroeconomics, 10th Canadian Edition. These figures update monthly to ensure up-to-date teaching resources are always available.
+This repository contains code that automatically updates selected figures from [Macroeconomics, 10th Canadian Edition](https://www.pearson.com/en-ca/subject-catalog/p/macroeconomics-canadian-edition/P200000011472/9780138203894). These figures update monthly to ensure up-to-date teaching resources are always available.
 
 ## Instructions to access updated figures
 
