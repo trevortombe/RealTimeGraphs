@@ -1,5 +1,5 @@
 # RealTimeGraphs
-Experimental code to automatically update selected figures. Currently selected figures from Chapters 2 and 7 are included for demonstration purposes only. The repository can be set to automatically update all files and figures automatically at pre-determined intervals. As most data is monthly, it would likely be most appropriate to update at the beginning of each month. It is currently set to do that by default.
+This repository contains code that automatically updates selected figures from Macroeconomics, 10th Canadian Edition. These figures update monthly to ensure up-to-date teaching resources are always available.
 
 ## Instructions to access updated figures
 
