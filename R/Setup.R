@@ -2,7 +2,8 @@
 rm(list=ls(all=TRUE)) 
 
 # Install Packages and Load
-packages<-c("tidyverse","zoo","openxlsx","cansim","fredr","ggrepel","ggseas")
+packages<-c("tidyverse","zoo","openxlsx","cansim","fredr","ggrepel","ggseas",
+            "readxl","scales","jsonlite")
 check.packages <- function(pkg){
   new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
   if (length(new.pkg)) 
