@@ -27,7 +27,7 @@ plotdata<-basedata %>%
   gather(type,value,-Year)
 ggplot(plotdata,aes(Year,value,group=type,color=type))+
   geom_hline(yintercept=0,size=1)+
-  geom_line(size=1.5)+
+  geom_line(linewidth=1.5)+
   annotate('text',y=155,x=1863,hjust=0,size=2.5,label="U.S. Civil War")+
   annotate('text',y=140,x=1870,hjust=0,size=2.5,label="Pennsylvanian\noil boom")+
   annotate('text',y=90,x=1882,hjust=0,size=2.5,label="Russian oil\nexports begin")+
@@ -42,7 +42,8 @@ ggplot(plotdata,aes(Year,value,group=type,color=type))+
   annotate('text',y=150,x=2005,size=2.5,label="Rapid growth\nof China, India")+
   annotate('text',y=30,x=2015,size=2.5,label="2015 price\ncollapse")+
   annotate('text',y=115,x=2022+1,size=2.5,label="Russia\ninvades\nUkraine")+
-  scale_x_continuous(breaks=seq(1870,2020,15))+
+  annotate('text',y=95,x=2026+2,size=2.5,hjust=0,label="U.S.-Iran\nWar")+
+  scale_x_continuous(breaks=seq(1870,2020,15),limit=c(NA,max(plotdata$Year)+5))+
   scale_color_manual(values=col[1:2],label=c("Nominal dollars","Real, 2022 dollars"))+
   theme(legend.position = 'top')+
   labs(x="Year",y="Dollars per barrel")

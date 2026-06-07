@@ -110,7 +110,7 @@ plotdata<-decomp_cpi %>%
 ggplot(plotdata,aes(Ref_Date,contrib,group=product,fill=product))+
   geom_col(position='stack')+
   geom_hline(yintercept=0,size=1)+
-  geom_line(aes(y=cpi),size=1.5)+
+  geom_line(aes(y=cpi),linewidth=1.5)+
   scale_y_continuous(label=percent,breaks=pretty_breaks(5))+
   scale_x_continuous(breaks=pretty_breaks(6))+
   annotate('text',x=2021.5,hjust=1,y=0.05,label="All-Items CPI",size=3)+

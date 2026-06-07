@@ -24,7 +24,7 @@ ggplot(fig,aes(Ref_Date,growth))+
            ymin=-Inf, ymax=+Inf, alpha=0.35, fill="gray")+
   annotate("rect",xmin=as.numeric(as.yearmon("Dec 1974")), xmax=as.numeric(as.yearmon("Mar 1975")),
            ymin=-Inf, ymax=+Inf, alpha=0.35, fill="gray")+
-  geom_hline(yintercept = 0,size=1)+
+  geom_hline(yintercept = 0,linewidth=1)+
   annotate('text',y=37,x=1993,hjust=0,
            color='gray40',size=3,label="Recessions")+
   geom_line(size=1.5,color=col[2])+
@@ -43,7 +43,7 @@ fig<-inflation_data %>%
   mutate(inflation=100*(VALUE/lag(VALUE,12)-1))
 ggplot(fig,aes(Date,inflation))+
   geom_hline(yintercept = 0,size=1)+
-  geom_line(size=1.5,color=col[2])+
+  geom_line(linewidth=1.5,color=col[2])+
   scale_y_continuous(limit=c(NA,25))+
   annotate('text',y=24,x=as.Date('1918-01-01'),hjust=0,size=3,label="World War I")+
   annotate('text',y=-15,x=as.Date('1924-01-01'),hjust=0,size=3,label="Post World War I")+
@@ -70,9 +70,9 @@ fig<-yields_data %>%
               select(Date,inf_avg_3yr),by='Date') %>%
   mutate(real=nominal-inf_avg_3yr)
 ggplot(fig,aes(Date,real))+
-  geom_hline(yintercept = 0,size=1)+
-  geom_line(size=1.5,color=col[2])+
-  geom_line(size=1.5,color=col[1],aes(y=nominal))+
+  geom_hline(yintercept = 0,linewidth=1)+
+  geom_line(linewidth=1.5,color=col[2])+
+  geom_line(linewidth=1.5,color=col[1],aes(y=nominal))+
   scale_y_continuous(limit=c(NA,20))+
   annotate('text',y=-3,x=as.Date('1978-01-01'),hjust=0,fontface='bold',
            color=col[2],size=3,label="Real interest rate")+

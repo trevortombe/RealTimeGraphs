@@ -18,7 +18,7 @@ plotdata<-GDP %>%
   gather(type,value,-Ref_Date,-GDP) %>%
   mutate(velocity=GDP/value)
 ggplot(plotdata,aes(Ref_Date,velocity,group=type,color=type))+
-  geom_line(size=1.5,show.legend = F)+
+  geom_line(linewidth=1.5,show.legend = F)+
   annotate('text',x=1990,y=7,label="Velocity of M1+",color=col[1],size=3,fontface='bold')+
   annotate('text',x=2000,y=2.5,label="Velocity of M2+",color=col[2],size=3,fontface='bold')+
   geom_hline(yintercept = 0,size=1)+
@@ -48,7 +48,7 @@ plotdata<-cpi %>%
   gather(type,value,-Ref_Date) %>%
   filter(Ref_Date>="Jan 1960")
 ggplot(plotdata,aes(Ref_Date,value,group=type,color=type))+
-  geom_line(size=1.5,show.legend = F)+
+  geom_line(linewidth=1.5,show.legend = F)+
   annotate('text',x=1995,y=16,label="Nominal interest rate",color=col[2],size=3,fontface='bold')+
   annotate('text',x=1982,y=2,label="Rate of inflation",color=col[1],size=3,fontface='bold')+
   geom_hline(yintercept = 0,size=1)+
@@ -81,7 +81,7 @@ plotdata<-BoC %>%
 ggplot(plotdata,aes(Ref_Date,Value))+
   geom_hline(yintercept=1,linetype='dashed')+
   geom_hline(yintercept=3,linetype='dashed')+
-  geom_line(size=1.5,color=col[2])+
+  geom_line(linewidth=1.5,color=col[2])+
   geom_hline(yintercept = 0,size=1)+
   scale_x_continuous(breaks = seq(1990,2025,5))+
   labs(x="",y="Percentage")

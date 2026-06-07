@@ -72,7 +72,7 @@ plotdata<-new_series %>%
 ggplot(plotdata,aes(date,100*share,group=type,color=type))+
   geom_col(data=filter(plotdata,type=='Canada'),aes(date,100*gap),inherit.aes = F,
            fill='gray70',width=0.5)+
-  geom_line(size=1.5,show.legend = F)+
+  geom_line(linewidth=1.5,show.legend = F)+
   annotate('text',x=2007,y=65,label="Canadian direct\ninvestment abroad (CDIA)",size=3,color=col[1],fontface='bold')+
   annotate('text',x=1980,y=35,label="Foreign direct\ninvestment in Canada (FDI)",size=3,color=col[2],fontface='bold')+
   annotate('text',x=2000,y=-15,

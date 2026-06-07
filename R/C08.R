@@ -58,7 +58,7 @@ ggplot(plotdata2,aes(Date,log(Value)))+
   annotate("rect",xmin=1990+2/12,xmax=1992+3/12,ymin=-Inf,ymax=Inf,alpha=0.2, fill="dodgerblue")+
   annotate("rect",xmin=2008+9/12,xmax=2009+4/12,ymin=-Inf,ymax=Inf,alpha=0.2, fill="dodgerblue")+
   annotate("rect",xmin=2020+1/12,xmax=2020+5/12,ymin=-Inf,ymax=Inf,alpha=0.2, fill="dodgerblue")+
-  geom_line(size=1.5,color=col[1])+
+  geom_line(linewidth=1.5,color=col[1])+
   scale_x_continuous(breaks=seq(1870,2020,15))+
   scale_y_continuous(breaks=log(c(3000,6000,12000,24000,48000,96000)),limit=c(8,11.6),
                      label=number(c(3000,6000,12000,24000,48000,96000),big.mark = " "))+
@@ -98,7 +98,7 @@ ggplot(plotdata,aes(Date,Value/1000,group=Estimates,color=Estimates))+
   annotate("rect",xmin=2008+9/12,xmax=2009+4/12,ymin=-Inf,ymax=Inf,alpha=0.2, fill="dodgerblue")+
   annotate("rect",xmin=2020+1/12,xmax=2020+5/12,ymin=-Inf,ymax=Inf,alpha=0.2, fill="dodgerblue")+
   geom_hline(yintercept=0,size=1)+
-  geom_line(size=1.5)+
+  geom_line(linewidth=1.5)+
   labs(x="",y="Consumption and investment\n(Billions of 2012 dollars)")
 ggsave('Figures/Fig08-003.png',width=6,height=3)
 
@@ -124,7 +124,7 @@ ggplot(plotdata,aes(Date,VALUE/1000,group=Estimates,color=Estimates))+
   annotate("rect",xmin=2020+1/12,xmax=2020+5/12,ymin=-Inf,ymax=Inf,alpha=0.2, fill="dodgerblue")+
   annotate('text',x=2005,y=32,label="Inventory\ninvestment",color=col[1],size=2.5)+
   geom_hline(yintercept=0,size=1)+
-  geom_line(size=1.5,show.legend = F)+
+  geom_line(linewidth=1.5,show.legend = F)+
   labs(x="",y="Inventory investment\n(Billions of 2012 dollars)")
 ggsave('Figures/Fig08-004.png',width=6,height=3)
 
@@ -153,7 +153,7 @@ ggplot(plotdata,aes(Date,VALUE/1000,group=Estimates,color=Estimates))+
   annotate('text',x=2005,y=625,label="Exports",color=col[1],size=2.5)+
   annotate('text',x=2005,y=375,hjust=0,label="Imports",color=col[2],size=2.5)+
   geom_hline(yintercept=0,size=1)+
-  geom_line(size=1.5,show.legend = F)+
+  geom_line(linewidth=1.5,show.legend = F)+
   labs(x="",y="Exports and imports\n(Billions of 2012 dollars)")
 ggsave('Figures/Fig08-005.png',width=6,height=3)
 
@@ -176,7 +176,7 @@ ggplot(plotdata,aes(Ref_Date,VALUE/1000))+
   annotate("rect",xmin=2008+9/12,xmax=2009+4/12,ymin=-Inf,ymax=Inf,alpha=0.2, fill="dodgerblue")+
   annotate("rect",xmin=2020+1/12,xmax=2020+5/12,ymin=-Inf,ymax=Inf,alpha=0.2, fill="dodgerblue")+
   annotate('text',x=2012,y=16.5,label="Employment",hjust=0,color=col[1],size=2.5)+
-  geom_line(size=1.5,color=col[1])+
+  geom_line(linewidth=1.5,color=col[1])+
   labs(x="",y="Employment (millions of people)")
 ggsave('Figures/Fig08-006.png',width=6,height=3)
 
@@ -198,7 +198,7 @@ ggplot(plotdata,aes(Ref_Date,VALUE))+
   annotate("rect",xmin=2008+9/12,xmax=2009+4/12,ymin=-Inf,ymax=Inf,alpha=0.2, fill="dodgerblue")+
   annotate("rect",xmin=2020+1/12,xmax=2020+5/12,ymin=-Inf,ymax=Inf,alpha=0.2, fill="dodgerblue")+
   annotate('text',x=2012,y=9,label="Unemployment\nrate",hjust=0,color=col[1],size=2.5)+
-  geom_line(size=1.5,color=col[1])+
+  geom_line(linewidth=1.5,color=col[1])+
   labs(x="",y="Unemployment rate (percentage of labour force)")
 ggsave('Figures/Fig08-007.png',width=6,height=3)
 
@@ -225,7 +225,7 @@ ggplot(plotdata,aes(Ref_Date,LabProd))+
   annotate("rect",xmin=2008+9/12,xmax=2009+4/12,ymin=-Inf,ymax=Inf,alpha=0.2, fill="dodgerblue")+
   annotate("rect",xmin=2020+1/12,xmax=2020+5/12,ymin=-Inf,ymax=Inf,alpha=0.2, fill="dodgerblue")+
   annotate('text',x=2012,y=100,label="Average labour\nproductivity",hjust=0,color=col[1],size=2.5)+
-  geom_line(size=1.5,color=col[1])+
+  geom_line(linewidth=1.5,color=col[1])+
   labs(x="",y="Average labour productivity\n(thousands of 2012 dollars)")
 ggsave('Figures/Fig08-008.png',width=6,height=3)
 
@@ -250,7 +250,7 @@ ggplot(plotdata,aes(Ref_Date,MA))+
   annotate("rect",xmin=2008+9/12,xmax=2009+4/12,ymin=-Inf,ymax=Inf,alpha=0.2, fill="dodgerblue")+
   annotate("rect",xmin=2020+1/12,xmax=2020+5/12,ymin=-Inf,ymax=Inf,alpha=0.2, fill="dodgerblue")+
   annotate('text',x=2012,y=12,label="M2+ growth",hjust=0,color=col[1],size=2.5)+
-  geom_line(size=1.5,color=col[1])+
+  geom_line(linewidth=1.5,color=col[1])+
   scale_x_continuous(breaks=seq(1970,2020,10))+
   labs(x="",y="M2+ growth (percent per year)")
 ggsave('Figures/Fig08-009.png',width=6,height=3)
@@ -280,7 +280,7 @@ ggplot(plotdata,aes(Ref_Date,Rates))+
   annotate("rect",xmin=2008+9/12,xmax=2009+4/12,ymin=-Inf,ymax=Inf,alpha=0.2, fill="dodgerblue")+
   annotate("rect",xmin=2020+1/12,xmax=2020+5/12,ymin=-Inf,ymax=Inf,alpha=0.2, fill="dodgerblue")+
   annotate('text',x=2013,y=3,label="Nominal\ninterest rate",color=col[1],size=2.5)+
-  geom_line(size=1.5,color=col[1])+
+  geom_line(linewidth=1.5,color=col[1])+
   labs(x="",y="Nominal interest rate\n(percentage per year)")
 ggsave('Figures/Fig08-010.png',width=6,height=3)
 
