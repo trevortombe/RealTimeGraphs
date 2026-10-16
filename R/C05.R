@@ -34,7 +34,7 @@ insertImage(wb,"Figure 5.1",'Figures/Fig05-001.png',
 # Figure 5.6 - international direct investment
 old_series<-get_cansim('36100073')
 new_series<-get_cansim('36100008')
-fon_macro<-read.csv('https://osf.io/2sm84/download')
+fon_macro<-read.csv('Data/MacroData.csv')
 NGDP<-get_cansim_vector("v62305783") %>% # latest nominal GDP to supplement the FoN
   mutate(date=year(Date)) %>%
   group_by(date) %>%
@@ -60,9 +60,8 @@ plotdata<-new_series %>%
   filter(date>=1945) %>%
   left_join(
     fon_macro %>%
-      filter(provname=="Canada",item=="Nominal GDP (Millions)",
-             transformation=="linear") %>%
-      select(date,NGDP=val),by='date'
+      filter(Region=="Canada",Variable=="Nominal GDP (Millions)") %>%
+      select(date=Year,NGDP=Value),by='date'
   ) %>%
   left_join(NGDP %>% rename(latest=NGDP),by="date") %>%
   mutate(NGDP=ifelse(date>=1961,latest,NGDP)) %>%
